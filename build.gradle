@@ -1,0 +1,111 @@
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+//        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.46"
+//        classpath "net.serenity-bdd:serenity-single-page-report:4.0.46"
+//        classpath "com.azure:azure-storage-blob:12.25.1"
+    }
+}
+
+plugins {
+//    id "net.serenity-bdd.serenity-gradle-plugin" version "4.0.27"
+    id 'java'
+    id 'eclipse'
+    id 'idea'
+    id 'org.sonarqube' version '4.0.0.2929'
+}
+
+group 'com.co.starter'
+version '1.0-SNAPSHOT'
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+ext {
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '4.0.46'
+    serenityCucumberVersion = '4.0.46'
+    junitVersion = '5.9.2'
+    assertJVersion = '3.8.0'
+    logbackVersion = '1.4.6'
+    lombokVersion = '1.18.26'
+}
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}",
+            "org.junit.jupiter:junit-jupiter-api:${junitVersion}",
+            "org.junit.jupiter:junit-jupiter-engine:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}",
+            "org.projectlombok:lombok:${lombokVersion}",
+            "ch.qos.logback:logback-classic:${logbackVersion}",
+
+            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}"
+
+    implementation 'io.rest-assured:json-schema-validator:4.5.1'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:11.2.3.jre17'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+    implementation 'com.zaxxer:HikariCP:4.0.3'
+    implementation 'org.apache.commons:commons-text:1.10.0'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation 'jakarta.persistence:jakarta.persistence-api:3.1.0'
+    implementation 'com.microsoft.azure:azure-storage:8.6.0'
+
+    testRuntimeOnly 'io.cucumber:cucumber-junit-platform-engine:7.11.2'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.9.2'
+
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    testCompileOnly 'junit:junit:4.13.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.4.0'
+}
+
+test {
+    String executionType = System.properties['ExecutionTypeSingle']
+    systemProperty 'environment', System.properties['environment']
+    systemProperty "ExecutionTypeSingle", executionType
+    useJUnit()
+    switch (executionType) {
+        case "@create-user":
+            include('**/CreateUser.class*')
+            maxParallelForks = 1
+            break
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
+
+//serenity {
+//    reports = ["single-page-html"]
+//    testRoot = "src/test/java/com/bt/p2p/automation/test"
+//}
+
+//test.finalizedBy(aggregate)
+
+test {
+    useJUnit()
+}
+
