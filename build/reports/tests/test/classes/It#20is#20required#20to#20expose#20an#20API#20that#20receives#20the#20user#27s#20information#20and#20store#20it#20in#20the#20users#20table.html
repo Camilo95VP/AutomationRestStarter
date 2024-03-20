@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">14</div>
+<div class="counter">1</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">19.181s</div>
+<div class="counter">10.262s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,54 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard output</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="TST-001 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user"></a>
+<h3 class="failures">TST-001 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</h3>
+<span class="code">
+<pre>java.lang.AssertionError: 
+Expected: is &lt;false&gt;
+     but: was &lt;true&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
+	at net.serenitybdd.screenplay.Actor.check(Actor.java:420)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:392)
+	at com.co.starter.test.task.rest.user.ValidateCreatedUser.performAs(ValidateCreatedUser.java:31)
+	at com.co.starter.test.task.rest.user.ValidateCreatedUser$ByteBuddy$A5KqeYod.performAs$accessor$B6tcM17I(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at com.co.starter.test.task.rest.user.ValidateCreatedUser$ByteBuddy$A5KqeYod.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(CreateUserStepDefinition.java:55)
+	at ✽.the response data is validated(file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature:17)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -78,85 +119,20 @@
 </tr>
 </thead>
 <tr>
-<td class="success">TST-001 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">11.993s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-002 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">1.146s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-003 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.745s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-004 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.606s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-005 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.538s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-007 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.612s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-008 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.546s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-009 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.604s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-010 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.547s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-011 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.454s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-012 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.326s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-013 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.297s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-014 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.347s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">TST-015 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
-<td class="success">0.420s</td>
-<td class="success">passed</td>
+<td class="failures">TST-001 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user</td>
+<td class="failures">10.262s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-@EN0001-FE
-Scenario Outline: TST-001 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:35?[0m
-17:48:41.815 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:42.089 [Test worker] INFO  -- 
+@EN0001-HP
+Scenario Outline: TST-001 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:22?[0m
+00:50:14.022 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
+00:50:14.224 [Test worker] INFO  -- 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
    | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
@@ -164,242 +140,106 @@ Scenario Outline: TST-001 The backend server of the automation rest consumes the
 
 &lt;testId&gt; The backend server of the automation rest consumes the user registration service in a happy path scenario: &lt;testDescription&gt;(it-is-required-to-expose-an-api-that-receives-the-user-s-information-and-store-it-in-the-users-table;&lt;testid&gt;-the-backend-server-of-the-automation-rest-consumes-the-user-registration-service-in-a-happy-path-scenario:-&lt;testdescription&gt;)
 --------------------------------------------------------------------------------
-17:48:43.426 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:44.096 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:50.723 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:50.772 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
+00:50:15.411 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+00:50:15.911 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
+00:50:21.249 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
+00:50:21.274 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
   ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
     | firstName | lastName | email | telephone | address | city |
-    | 1         | OK       | OK    | OK        | OK      | OK   |
-17:48:50.869 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:53.508 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                              | type  |
-    | 1         | OK       | OK    | OK        | OK      | OK   | 400          | Nombre invÃ¡lido, solo se permiten caracteres alfabÃ©ticos | ERROR |
-17:48:53.606 [Test worker] INFO  -- 
-  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
- |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
-   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+    | OK        | OK       | OK    | OK        | OK      | OK   |
+00:50:21.340 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
+00:50:22.819 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- HikariPool-1 - configuration:
+00:50:22.823 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- allowPoolSuspension................................false
+00:50:22.823 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- autoCommit................................true
+00:50:22.824 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- catalog................................none
+00:50:22.824 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- connectionInitSql................................none
+00:50:22.825 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- connectionTestQuery................................none
+00:50:22.825 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- connectionTimeout................................30000
+00:50:22.825 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- dataSource................................none
+00:50:22.825 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- dataSourceClassName................................none
+00:50:22.826 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- dataSourceJNDI................................none
+00:50:22.826 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- dataSourceProperties................................{password=&lt;masked&gt;, prepStmtCacheSqlLimit=2048, cachePrepStmts=true, prepStmtCacheSize=250}
+00:50:22.827 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- driverClassName................................none
+00:50:22.827 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- exceptionOverrideClassName................................none
+00:50:22.827 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- healthCheckProperties................................{}
+00:50:22.827 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- healthCheckRegistry................................none
+00:50:22.828 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- idleTimeout................................600000
+00:50:22.828 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- initializationFailTimeout................................1
+00:50:22.828 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- isolateInternalQueries................................false
+00:50:22.828 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- jdbcUrl................................jdbc:sqlserver://127.0.0.1:1433;databaseName=user;encrypt=false;trustServerCertificate=true
+00:50:22.829 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- keepaliveTime................................0
+00:50:22.829 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- leakDetectionThreshold................................0
+00:50:22.829 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- maxLifetime................................1800000
+00:50:22.829 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- maximumPoolSize................................10
+00:50:22.829 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- metricRegistry................................none
+00:50:22.829 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- metricsTrackerFactory................................none
+00:50:22.830 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- minimumIdle................................10
+00:50:22.830 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- password................................&lt;masked&gt;
+00:50:22.830 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- poolName................................&quot;HikariPool-1&quot;
+00:50:22.830 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- readOnly................................false
+00:50:22.831 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- registerMbeans................................false
+00:50:22.831 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- scheduledExecutor................................none
+00:50:22.831 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- schema................................none
+00:50:22.831 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- threadFactory................................internal
+00:50:22.831 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- transactionIsolation................................default
+00:50:22.832 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- username................................&quot;sa&quot;
+00:50:22.832 [Test worker] DEBUG com.zaxxer.hikari.HikariConfig -- validationTimeout................................5000
+00:50:22.834 [Test worker] INFO com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Starting...
+00:50:23.017 [Test worker] DEBUG com.zaxxer.hikari.util.DriverDataSource -- Loaded driver with class name com.microsoft.sqlserver.jdbc.SQLServerDriver for jdbcUrl=jdbc:sqlserver://127.0.0.1:1433;databaseName=user;encrypt=false;trustServerCertificate=true
+00:50:23.590 [Test worker] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:1 ClientConnectionId: 07d762ea-38e1-4cbc-b908-b5d442ee2796
+00:50:23.595 [Test worker] INFO com.zaxxer.hikari.HikariDataSource -- HikariPool-1 - Start completed.
+00:50:23.695 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+00:50:23.753 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:2 ClientConnectionId: 8d4d88a6-8455-49e9-b874-ace12bf9959d
+  ?[31mThen ?[0m?[31mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
+    | firstName | lastName | email | telephone | address | city | codeResponse | description                 | type    | databaseCheck |
+    | OK        | OK       | OK    | OK        | OK      | OK   | 201          | Usuario creado exitosamente | SUCCESS | false         |
+      ?[31mjava.lang.AssertionError: 
+Expected: is &lt;false&gt;
+     but: was &lt;true&gt;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at net.serenitybdd.screenplay.QuestionConsequence.evaluateFor(QuestionConsequence.java:49)
+	at net.serenitybdd.screenplay.Actor.check(Actor.java:420)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:392)
+	at com.co.starter.test.task.rest.user.ValidateCreatedUser.performAs(ValidateCreatedUser.java:31)
+	at com.co.starter.test.task.rest.user.ValidateCreatedUser$ByteBuddy$A5KqeYod.performAs$accessor$B6tcM17I(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)
+	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
+	at com.co.starter.test.task.rest.user.ValidateCreatedUser$ByteBuddy$A5KqeYod.performAs(Unknown Source)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(CreateUserStepDefinition.java:55)
+	at âœ½.the response data is validated(file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature:17)
+?[0m
+00:50:23.823 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:3 ClientConnectionId: c8d32965-e1e9-4ba5-9d3b-b37a9b6a24cb
+00:50:23.874 [Test worker] ERROR  -- 
+  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
+ |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
+   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
 
 &lt;testId&gt; The backend server of the automation rest consumes the user registration service in a happy path scenario
-----------------------------------------------------------------------
-
-@EN0001-FE
-Scenario Outline: TST-002 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:36?[0m
-17:48:53.657 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:53.759 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:54.080 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:54.294 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:54.317 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | empty     | OK       | OK    | OK        | OK      | OK   |
-17:48:54.371 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:54.638 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                              | type  |
-    | empty     | OK       | OK    | OK        | OK      | OK   | 400          | Nombre invÃ¡lido, solo se permiten caracteres alfabÃ©ticos | ERROR |
-17:48:54.709 [Test worker] INFO  -- 
-  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
- |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
-   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
-
-&lt;testId&gt; The backend server of the automation rest consumes the user registration service in a happy path scenario
-----------------------------------------------------------------------
-
-@EN0001-FE
-Scenario Outline: TST-003 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:37?[0m
-17:48:54.810 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:54.847 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:55.016 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:55.137 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:55.159 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | null      | OK       | OK    | OK        | OK      | OK   |
-17:48:55.207 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:55.454 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                   | type  |
-    | null      | OK       | OK    | OK        | OK      | OK   | 400          | El campo 'firstName' no puede estar en blanco | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-004 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:38?[0m
-17:48:55.584 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:55.613 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:55.726 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:55.843 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:55.862 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | 1        | OK    | OK        | OK      | OK   |
-17:48:55.898 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:56.077 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                                | type  |
-    | OK        | 1        | OK    | OK        | OK      | OK   | 400          | Apellido invÃ¡lido, solo se permiten caracteres alfabÃ©ticos | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-005 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:39?[0m
-17:48:56.161 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:56.187 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:56.281 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:56.373 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:56.403 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | empty    | OK    | OK        | OK      | OK   |
-17:48:56.440 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:56.629 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                                | type  |
-    | OK        | empty    | OK    | OK        | OK      | OK   | 400          | Apellido invÃ¡lido, solo se permiten caracteres alfabÃ©ticos | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-007 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:40?[0m
-17:48:56.700 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:56.736 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:56.837 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:56.941 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:56.966 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | null     | OK    | OK        | OK      | OK   |
-17:48:57.003 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:57.223 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                  | type  |
-    | OK        | null     | OK    | OK        | OK      | OK   | 400          | El campo 'lastName' no puede estar en blanco | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-008 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:41?[0m
-17:48:57.315 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:57.345 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:57.442 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:57.523 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:57.552 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email         | telephone | address | city |
-    | OK        | OK       | juangmail.com | OK        | OK      | OK   |
-17:48:57.602 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:57.793 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email         | telephone | address | city | codeResponse | description                                                          | type  |
-    | OK        | OK       | juangmail.com | OK        | OK      | OK   | 400          | El campo 'email' debe ser una direcciÃ³n de correo electrÃ³nico vÃ¡lida | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-009 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:42?[0m
-17:48:57.855 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:57.876 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:57.959 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:58.045 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:58.067 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | OK       | OK    | telefono  | OK      | OK   |
-17:48:58.108 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:58.391 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                       | type  |
-    | OK        | OK       | OK    | telefono  | OK      | OK   | 400          | El campo 'telephone' no es vÃ¡lido | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-010 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:43?[0m
-17:48:58.460 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:58.487 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:58.595 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:58.680 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:58.705 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | OK       | OK    | empty     | OK      | OK   |
-17:48:58.763 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:58.941 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                       | type  |
-    | OK        | OK       | OK    | empty     | OK      | OK   | 400          | El campo 'telephone' no es vÃ¡lido | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-011 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:44?[0m
-17:48:59.009 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:59.035 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:59.120 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:59.249 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:59.265 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | OK       | OK    | null      | OK      | OK   |
-17:48:59.291 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:59.411 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                   | type  |
-    | OK        | OK       | OK    | null      | OK      | OK   | 400          | El campo 'telephone' no puede estar en blanco | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-012 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:45?[0m
-17:48:59.462 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:59.493 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:59.550 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:59.599 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:59.612 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | OK       | OK    | OK        | empty   | OK   |
-17:48:59.639 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:59.746 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                 | type  |
-    | OK        | OK       | OK    | OK        | empty   | OK   | 400          | El campo 'address' no puede estar en blanco | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-013 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:46?[0m
-17:48:59.786 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:59.802 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:48:59.853 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:48:59.907 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:48:59.919 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | OK       | OK    | OK        | null    | OK   |
-17:48:59.942 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:49:00.049 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                                 | type  |
-    | OK        | OK       | OK    | OK        | null    | OK   | 400          | El campo 'address' no puede estar en blanco | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-014 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:47?[0m
-17:49:00.084 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:49:00.096 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:49:00.154 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:49:00.218 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:49:00.244 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city  |
-    | OK        | OK       | OK    | OK        | OK      | empty |
-17:49:00.274 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:49:00.388 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city  | codeResponse | description                              | type  |
-    | OK        | OK       | OK    | OK        | OK      | empty | 400          | El campo 'city' no puede estar en blanco | ERROR |
-
-@EN0001-FE
-Scenario Outline: TST-015 The backend server of the automation rest consumes the user registration service in a happy path scenario: Happy path - 1user ?[90m# src/test/resources/features/create_user.feature:48?[0m
-17:49:00.434 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:49:00.463 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:49:00.536 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - {0} executes a POST on the resource #resource
-17:49:00.605 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: {0} executes a POST on the resource #resource
-17:49:00.617 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mWhen ?[0m?[32mthe backend server calls the microservice to register an user with the data?[0m                                                                      ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theUserCallTheServiceWithTheData(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city |
-    | OK        | OK       | OK    | OK        | OK      | null |
-17:49:00.642 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STARTING STEP: StepInterceptor.testContext - performAs
-17:49:00.794 [Test worker] DEBUG net.thucydides.core.steps.StepInterceptor -- STEP DONE: performAs
-  ?[32mThen ?[0m?[32mthe response data is validated?[0m                                                                                                                   ?[90m# com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(com.co.starter.test.models.datatables.user.CreateUserDataTable)?[0m
-    | firstName | lastName | email | telephone | address | city | codeResponse | description                              | type  |
-    | OK        | OK       | OK    | OK        | OK      | null | 400          | El campo 'city' no puede estar en blanco | ERROR |
+-----------------------------------------------------------------------
+00:50:23.884 [Test worker] DEBUG  -- RELATED ISSUES: 
+00:50:23.903 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:4 ClientConnectionId: fbfa7f8c-8b35-4067-b4d8-1b2d852f5d37
+00:50:23.953 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:5 ClientConnectionId: 35669c53-61b9-47d1-aec4-dca6aedbacfd
+00:50:23.992 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:6 ClientConnectionId: 33c25c9d-1d25-4d66-b17c-72f6a8603fb2
+00:50:24.044 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:7 ClientConnectionId: f797b4ab-7612-4a47-bb6f-33a4140371ec
+00:50:24.088 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:8 ClientConnectionId: 18a65540-22fe-4e13-8a90-e86d9f72f12f
+00:50:24.103 [Test worker] ERROR  --     Test failed at step: Then The info in database should be (false)
+00:50:24.112 [Test worker] ERROR  --     Expected: is &lt;false&gt; but: was &lt;true&gt;
+00:50:24.136 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:9 ClientConnectionId: 238b2135-9012-4df0-a319-b81e3bc6c531
 </pre>
 </span>
 </div>
@@ -411,7 +251,7 @@ Scenario Outline: TST-015 The backend server of the automation rest consumes the
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.5.1</a> at 18/03/2024, 5:49:01 p. m.</p>
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 20/03/2024, 12:50:24 a. m.</p>
 </div>
 </div>
 </body>

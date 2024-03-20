@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="It is required to expose an API that receives the user's information and store it in the users table" skipped="0" tests="14" time="8.62" timestamp="2024-03-18 05:48:42"><testcase name="&lt;testId&gt; The backend server of the automation rest consumes the user registration service in a happy path scenario"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="It is required to expose an API that receives the user's information and store it in the users table" skipped="0" tests="1" time="7.01" timestamp="2024-03-20 12:50:14"><testcase name="&lt;testId&gt; The backend server of the automation rest consumes the user registration service in a happy path scenario"><failure message="&#13;&#10;Expected: is &lt;false&gt;&#13;&#10;     but: was &lt;true&gt;" type="java.lang.AssertionError">&#13;
+Expected: is &lt;false&gt;&#13;
+     but: was &lt;true&gt;</failure><system-err>&#13;
+Expected: is &lt;false&gt;&#13;
+     but: was &lt;true&gt;&#13;
+com.co.starter.test.task.rest.user.ValidateCreatedUser.performAs(ValidateCreatedUser.java:31)&#13;
+net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:523)&#13;
+net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:503)&#13;
+net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:475)&#13;
+net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:217)&#13;
+net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:204)&#13;
+net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)&#13;
+com.co.starter.test.stepdefinitions.CreateUserStepDefinition.theResponseDataIsValidated(CreateUserStepDefinition.java:55)&#13;
+io.cucumber.java.Invoker.doInvoke(Invoker.java:66)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:24)&#13;
+io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)&#13;
+io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:56)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:84)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:75)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)&#13;
+io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)&#13;
+io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)&#13;
+io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)&#13;
+io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)&#13;
+io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>

@@ -13,4 +13,5 @@ public class CreateUserDataTable {
     private String codeResponse;
     private String description;
     private String type;
+    private String databaseCheck;
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="com.co.starter.test.runners.CreateUserRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="PSOFKA0441" time="0.0">
   <properties/>
-  <system-out><![CDATA[17:48:41.205 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:41.396 [Test worker] INFO  -- 
+  <system-out><![CDATA[00:50:13.633 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
+00:50:13.737 [Test worker] INFO  -- 
 
 -------------------------------------------------------------------------------------
      _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
@@ -19,20 +19,22 @@
  Join the Serenity Community on Gitter: https://gitter.im/serenity-bdd/serenity-core 
 -------------------------------------------------------------------------------------
 
-17:48:41.409 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for story net.thucydides.model.domain.Story@52a825c0
-17:48:41.417 [Test worker] INFO  -- Test Suite Started: It is required to expose an API that receives the user's information and store it in the users table
-17:48:41.646 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
-17:48:41.654 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for story net.thucydides.model.domain.Story@52a825c0
-17:48:41.654 [Test worker] INFO  -- Test Suite Started: It is required to expose an API that receives the user's information and store it in the users table
-17:49:00.864 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reporting formats: [JSON]
-17:49:00.873 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reporting formats: [JSON]
-17:49:00.892 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Generating reports for 1 test outcomes using: net.thucydides.model.reports.json.JSONTestOutcomeReporter@3eeb488b
-17:49:00.895 [pool-3-thread-1] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome It is required to expose an API that receives the user's information and store it in the users table:<testId> The backend server of the automation rest consumes the user registration service in a happy path scenario: <testDescription>
-17:49:00.896 [pool-3-thread-1] DEBUG net.thucydides.model.reports.ReportService -- net.thucydides.model.reports.json.JSONTestOutcomeReporter@3eeb488b: Generating report for test outcome: It is required to expose an API that receives the user's information and store it in the users table:<testId> The backend server of the automation rest consumes the user registration service in a happy path scenario: <testDescription>
-17:49:00.918 [pool-3-thread-1] DEBUG net.thucydides.model.reports.json.JSONTestOutcomeReporter -- Generating JSON report for <testId> The backend server of the automation rest consumes the user registration service in a happy path scenario to file C:\PROGRAMACION\AutomationRestStarter\target\site\serenity\37e625482e856a89b5839084ebd514a2ebf13019927825c63f7339ee2c1fb944.json)
-17:49:01.040 [pool-3-thread-1] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome It is required to expose an API that receives the user's information and store it in the users table:<testId> The backend server of the automation rest consumes the user registration service in a happy path scenario: <testDescription> done
-17:49:01.041 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Shutting down executor service
-17:49:01.048 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reports generated in: 148 ms
+00:50:13.750 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for story net.thucydides.model.domain.Story@52a825c0
+00:50:13.755 [Test worker] INFO  -- Test Suite Started: It is required to expose an API that receives the user's information and store it in the users table
+00:50:13.899 [Test worker] DEBUG io.cucumber.core.plugin.SerenityReporter -- Running feature from file:///C:/PROGRAMACION/AutomationRestStarter/src/test/resources/features/create_user.feature
+00:50:13.906 [Test worker] DEBUG net.thucydides.core.steps.StepEventBus -- Test suite started for story net.thucydides.model.domain.Story@52a825c0
+00:50:13.907 [Test worker] INFO  -- Test Suite Started: It is required to expose an API that receives the user's information and store it in the users table
+00:50:24.180 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - Added connection ConnectionID:10 ClientConnectionId: fec370d1-8238-4918-a19b-964947760975
+00:50:24.180 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool -- HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+00:50:24.184 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reporting formats: [JSON]
+00:50:24.193 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reporting formats: [JSON]
+00:50:24.209 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Generating reports for 1 test outcomes using: net.thucydides.model.reports.json.JSONTestOutcomeReporter@6465f4a
+00:50:24.211 [pool-4-thread-1] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome It is required to expose an API that receives the user's information and store it in the users table:<testId> The backend server of the automation rest consumes the user registration service in a happy path scenario: <testDescription>
+00:50:24.212 [pool-4-thread-1] DEBUG net.thucydides.model.reports.ReportService -- net.thucydides.model.reports.json.JSONTestOutcomeReporter@6465f4a: Generating report for test outcome: It is required to expose an API that receives the user's information and store it in the users table:<testId> The backend server of the automation rest consumes the user registration service in a happy path scenario: <testDescription>
+00:50:24.227 [pool-4-thread-1] DEBUG net.thucydides.model.reports.json.JSONTestOutcomeReporter -- Generating JSON report for <testId> The backend server of the automation rest consumes the user registration service in a happy path scenario to file C:\PROGRAMACION\AutomationRestStarter\target\site\serenity\37e625482e856a89b5839084ebd514a2ebf13019927825c63f7339ee2c1fb944.json)
+00:50:24.317 [pool-4-thread-1] DEBUG net.thucydides.model.reports.ReportService -- Processing test outcome It is required to expose an API that receives the user's information and store it in the users table:<testId> The backend server of the automation rest consumes the user registration service in a happy path scenario: <testDescription> done
+00:50:24.317 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Shutting down executor service
+00:50:24.319 [Test worker] DEBUG net.thucydides.model.reports.ReportService -- Reports generated in: 109 ms
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
